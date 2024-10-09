@@ -1,0 +1,2 @@
+#!/bin/dash
+ffmpeg -f x11grab -video_size 1920x1080 -i :0.0 -pix_fmt rgba "$HOME/pic/screenshot_$(date +%Y%m%d_%H%M%S).png"

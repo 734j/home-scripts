@@ -1,0 +1,15 @@
+#!/bin/dash
+
+stop_ffmpeg() {
+    pkill -f "ffmpeg -v quiet -f x11grab -video_size 1920x1080 -i :0.0"
+    exit
+}
+
+
+# Check if argument is provided
+if [ "$1" = "stop" ]; then
+    stop_ffmpeg
+fi
+
+# Start ffmpeg screen recording
+ffmpeg -v quiet -f x11grab -video_size 1920x1080 -i :0.0 "$HOME/pic/screenrec_$(date +"%Y%m%d_%H%M").mp4"

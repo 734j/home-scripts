@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd "$HOME/pic/CANON"
+yes | gphoto2 -P
